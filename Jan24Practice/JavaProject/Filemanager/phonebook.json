@@ -1,0 +1,23 @@
+[
+  {
+    "lastName": "Иванов",
+    "firstName": "Фёдор",
+    "phone1": "357",
+    "phone2": "135",
+    "phone3": "795"
+  },
+  {
+    "lastName": "Петров",
+    "firstName": "Пётр",
+    "phone1": "123",
+    "phone2": "456",
+    "phone3": "789"
+  },
+  {
+    "lastName": "Сидоров",
+    "firstName": "Сидор",
+    "phone1": "468",
+    "phone2": "864",
+    "phone3": "284"
+  }
+]

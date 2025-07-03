@@ -1,0 +1,49 @@
+@startuml
+
+class PeopleTableApp {
+  - model: DefaultTableModel
+  - table: JTable
+  - phonebook: Phonebook
+
+  + PeopleTableApp()
+  + addButton(Container, String, ActionListener)
+  + addPerson()
+  + removePerson()
+  + searchByLastName()
+  + searchByPhoneNumber()
+  + sortTable()
+  + updatePersonData()
+}
+
+class Phonebook {
+  - rowDataList: List<RowData>
+  - gson: Gson
+
+  + Phonebook()
+  + getRowDataList(): List<RowData>
+  + addRowData(RowData)
+  + removeRowData(int)
+  + updateAllRowData(List<RowData>)
+  + loadFromJson(String)
+  + saveToJson(String)
+}
+
+class RowData {
+  - lastName: String
+  - firstName: String
+  - phone1: String
+  - phone2: String
+  - phone3: String
+
+  + RowData(String, String, String, String, String)
+  + getLastName(): String
+  + getFirstName(): String
+  + getPhone1(): String
+  + getPhone2(): String
+  + getPhone3(): String
+}
+
+PeopleTableApp --> Phonebook
+Phonebook --> RowData
+
+@enduml
